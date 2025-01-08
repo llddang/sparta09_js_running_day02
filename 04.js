@@ -12,10 +12,16 @@
  */
 
 // TODO: filterEven 함수를 작성하세요.
-function filterEven() {}
+function filterEven(arr) {
+  const byEven = (n) => n % 2 === 0;
+  return arr.filter(byEven);
+}
 
 // TODO: filterOdd 함수를 작성하세요.
-function filterOdd() {}
+function filterOdd(arr) {
+  const byOdd = (n) => n % 2;
+  return arr.filter(byOdd);
+}
 
 // export를 수정하지 마세요.
 export { filterEven, filterOdd };
