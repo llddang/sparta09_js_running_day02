@@ -6,7 +6,7 @@
  * @returns {number[]} 요소가 1, 2, 3인 배열
  */
 
-const array = [];
+const array = Array.from({ length: 3 }, (_, i) => i + 1);
 
 //export를 수정하지 마세요.
 export { array };
