@@ -30,7 +30,11 @@
 // TODO: groupBy 함수를 작성하세요.
 
 function groupBy(arr, key) {
-  // 여기에 코드를 작성하세요.
+  const res = {};
+  arr.forEach((item) => {
+    res[item[key]] ? res[item[key]].push(item) : (res[item[key]] = [item]);
+  });
+  return res;
 }
 
 // export를 수정하지 마세요.
