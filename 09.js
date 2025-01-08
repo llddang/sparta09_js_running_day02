@@ -12,8 +12,16 @@
 
 // TODO: calculateStatistics 함수를 작성하세요.
 function calculateStatistics(users) {
-  // TODO
+  return users.reduce(
+    ({ averageAge, maxAge }, user, idx) => ({
+      averageAge: averageAge + user.age / users.length,
+      maxAge: Math.max(user.age, idx === 0 ? Number.NEGATIVE_INFINITY : maxAge),
+    }),
+    { averageAge: 0, maxAge: 0 }
+  );
 }
 
 // export를 수정하지 마세요.
 export { calculateStatistics };
+
+console.log(calculateStatistics([]));
