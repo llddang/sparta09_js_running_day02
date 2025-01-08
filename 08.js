@@ -15,7 +15,11 @@
 
 // TODO: chunkArray 함수를 작성하세요.
 function chunkArray(arr, size) {
-  // TODO
+  return arr.reduce((acc, v, i) => {
+    if (i % size === 0) acc.push([v]);
+    else acc[acc.length - 1].push(v);
+    return acc;
+  }, []);
 }
 
 // export를 수정하지 마세요.
